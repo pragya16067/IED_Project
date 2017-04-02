@@ -1,0 +1,11 @@
+Download WAMP server 
+Download Composer
+Download Laravel using composer (v 5.4.15)
+Application key [base64:7IolmrAyEOMne9Y1E7cxS5SjROLM9NHHZoA8KfXwoOg=] set successfully.
+
+Application Home ---------  http://localhost/iedproject/public/
+Setup Virtual Host
+	https://john-dugan.com/wamp-vhost-setup/
+	This will make URLs cleaner
+
+Now Application Home ---------  http://iedproject.local
