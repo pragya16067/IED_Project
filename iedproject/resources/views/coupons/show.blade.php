@@ -22,6 +22,7 @@
 								<th>Lunch</th>
 								<th>Snacks</th>
 								<th>Dinner</th>
+								<th>Status</th>
 								<th>Actions</th>
 							  </tr>
 							</thead>
@@ -38,10 +39,22 @@
 									<td> {{$coupon->lunch}} </td>
 									<td> {{$coupon->snacks}} </td>
 									<td> {{$coupon->dinner}}</td>
+									<td> {{$coupon->blocked}}</td>
+									<td>
+									<form action="/coupons/{{$coupon->id}}/block" method="POST">
+											<input type="hidden" name="id" value="{{$coupon->id}}">
+											<input type="hidden" name="blocked" value="{{$coupon->blocked}}">
+											{{ csrf_field() }}
+											
+											<input type="submit" class="btn btn-default" aria-label="Left Align" value="Change Block Status of Your Card">
+											    
+													
+									</form>
+									</td>
 								</tr>
 							</tbody>
 						</table>
-					</div>
+					</div>	
 				</div>
             </div>
         </div>

@@ -20,6 +20,7 @@
 								<th>Lunch</th>
 								<th>Snacks</th>
 								<th>Dinner</th>
+								<th>Status</th>
 								<th>Actions</th>
 							  </tr>
 							</thead>
@@ -36,10 +37,23 @@
 									<td> <?php echo e($coupon->lunch); ?> </td>
 									<td> <?php echo e($coupon->snacks); ?> </td>
 									<td> <?php echo e($coupon->dinner); ?></td>
+									<td> <?php echo e($coupon->blocked); ?></td>
+									<td>
+									<form action="/coupons/<?php echo e($coupon->id); ?>/block" method="POST">
+											<input type="hidden" name="id" value="<?php echo e($coupon->id); ?>">
+											<input type="hidden" name="blocked" value="<?php echo e($coupon->blocked); ?>">
+											<?php echo e(csrf_field()); ?>
+
+											
+											<input type="submit" class="btn btn-default" aria-label="Left Align" value="Change Block Status of Your Card">
+											    
+													
+									</form>
+									</td>
 								</tr>
 							</tbody>
 						</table>
-					</div>
+					</div>	
 				</div>
             </div>
         </div>

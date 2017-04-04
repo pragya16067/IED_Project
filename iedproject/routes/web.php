@@ -20,6 +20,7 @@ Route::get('/home', 'CouponsController@index');
 
 Route::get('/coupons', 'CouponsController@index');
 Route::get('/coupons/{coupon}/edit', 'CouponsController@showCoupon');
+Route::post('/coupons/{coupon}/block', 'CouponsController@setCardStatus');
 Route::delete('/coupons/{coupon}', 'CouponsController@destroy');
 Route::get('/coupons/{coupon}', 'CouponsController@show');
 Route::post('/coupons/{coupon}', 'CouponsController@save');
